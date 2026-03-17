@@ -108,11 +108,10 @@ export default function Home() {
                 <span className="font-medium text-stone-700">focus</span>,{' '}
                 <span className="font-medium text-stone-700">emotional expression</span>,{' '}
                 <span className="font-medium text-stone-700">self-confidence</span>, and{' '}
-                <span className="font-medium text-stone-700">academic growth</span>{' '}
-                through guidance that feels safe, simple, and supportive. Featuring a friendly AI companion,{' '}
-                <span className="font-medium text-amber-700">Bestie</span>, the app offers personalized conversations, 
-                guided reflection, sound-based focus tools, and progress tracking, along with fun, interactive avatar 
-                experiences, bridging mindfulness practices and AI to create an engaging daily experience for students.
+                <span className="font-medium text-stone-700">academic growth</span>. With a friendly AI companion,{' '}
+                <span className="font-medium text-amber-700">Bestie</span>, the app offers personalized chats, 
+                guided reflection, sound-based focus tools, and progress tracking, plus fun, interactive avatar 
+                experiences, bridging mindfulness, AI, and the gap between student and counselor ratios.
               </p>
 
               {/* Feature Tags */}

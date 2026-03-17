@@ -57,7 +57,7 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 {/* Email */}
                 <a 
-                  href="mailto:howens0414@gmail.com"
+                  href="mailto:All4you@divinityreflections.com"
                   className="group p-3 rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 hover:shadow-lg hover:shadow-rose-200 transition-all duration-300 hover:scale-110"
                   aria-label="Email"
                 >

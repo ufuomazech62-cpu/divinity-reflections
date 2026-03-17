@@ -23,6 +23,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-[280px_1fr] gap-10 lg:gap-16 items-center">
             {/* Photo Section */}
             <div className="flex flex-col items-center">
+              {/* Photo */}
               <div className="relative group">
                 {/* Decorative ring */}
                 <div className="absolute -inset-3 rounded-full bg-gradient-to-br from-amber-200/50 to-rose-200/50 blur-sm group-hover:blur-md transition-all duration-500" />
@@ -39,18 +40,21 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Name & Title */}
-              <div className="mt-6 text-center">
+              {/* Name & Title - More spacing */}
+              <div className="mt-8 text-center">
                 <h2 className="text-xl sm:text-2xl font-medium text-stone-800 tracking-tight">
                   Hayley Owens
                 </h2>
-                <p className="text-amber-700 font-medium tracking-widest text-xs uppercase mt-1">
+                <p className="text-amber-700 font-medium tracking-widest text-xs uppercase mt-2">
                   Founder & C.E.O
                 </p>
               </div>
 
+              {/* Divider */}
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent mt-6 mb-6" />
+
               {/* Social Icons */}
-              <div className="mt-5 flex items-center gap-3">
+              <div className="flex items-center gap-4">
                 {/* Email */}
                 <a 
                   href="mailto:howens0414@gmail.com"
@@ -75,7 +79,7 @@ export default function Home() {
               </div>
 
               {/* Location */}
-              <div className="mt-4 flex items-center gap-2 text-stone-500">
+              <div className="mt-5 flex items-center gap-2 text-stone-500">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />

@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { db } from "@/lib/db";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -37,33 +36,10 @@ export async function POST(request: Request) {
       );
     }
 
-    // Check if email already exists
-    const existingEntry = await db.waitlist.findFirst({
-      where: { email },
-    });
-
-    if (existingEntry) {
-      return NextResponse.json(
-        { error: "This email is already on the waitlist" },
-        { status: 409 }
-      );
-    }
-
-    // Create waitlist entry
-    const entry = await db.waitlist.create({
-      data: {
-        name,
-        email,
-        schoolDistrictName,
-        role,
-        estimatedStudents: studentsNum,
-      },
-    });
-
     // Send email notification
     try {
       await resend.emails.send({
-        from: "Divinity Reflections <onboarding@resend.dev>",
+        from: "onboarding@resend.dev",
         to: NOTIFICATION_EMAIL,
         subject: `🎉 New Waitlist Sign-up: ${name}`,
         html: `
@@ -85,19 +61,17 @@ export async function POST(request: Request) {
         `,
       });
     } catch (emailError) {
-      // Log email error but don't fail the request
       console.error("Failed to send email notification:", emailError);
+      return NextResponse.json(
+        { error: "Failed to submit. Please try again later." },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json(
       { 
         success: true, 
         message: "Successfully added to waitlist",
-        data: {
-          id: entry.id,
-          name: entry.name,
-          email: entry.email,
-        }
       },
       { status: 201 }
     );
@@ -111,14 +85,5 @@ export async function POST(request: Request) {
 }
 
 export async function GET() {
-  try {
-    const count = await db.waitlist.count();
-    return NextResponse.json({ count });
-  } catch (error) {
-    console.error("Failed to get waitlist count:", error);
-    return NextResponse.json(
-      { error: "Failed to get waitlist count" },
-      { status: 500 }
-    );
-  }
+  return NextResponse.json({ count: 0 });
 }

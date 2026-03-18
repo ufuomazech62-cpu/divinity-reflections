@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || "All4you@divinityreflections.com";
 
 export async function POST(request: Request) {
   try {
@@ -54,6 +59,35 @@ export async function POST(request: Request) {
         estimatedStudents: studentsNum,
       },
     });
+
+    // Send email notification
+    try {
+      await resend.emails.send({
+        from: "Divinity Reflections <onboarding@resend.dev>",
+        to: NOTIFICATION_EMAIL,
+        subject: `🎉 New Waitlist Sign-up: ${name}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <h2 style="color: #292524; border-bottom: 2px solid #d97706; padding-bottom: 10px;">
+              New Early Access Request
+            </h2>
+            <div style="background: #fafaf9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+              <p style="margin: 10px 0;"><strong style="color: #57534e;">Name:</strong> ${name}</p>
+              <p style="margin: 10px 0;"><strong style="color: #57534e;">Email:</strong> <a href="mailto:${email}" style="color: #d97706;">${email}</a></p>
+              <p style="margin: 10px 0;"><strong style="color: #57534e;">School/District:</strong> ${schoolDistrictName}</p>
+              <p style="margin: 10px 0;"><strong style="color: #57534e;">Role:</strong> ${role}</p>
+              <p style="margin: 10px 0;"><strong style="color: #57534e;">Estimated Students:</strong> ${studentsNum.toLocaleString()}</p>
+            </div>
+            <p style="color: #78716c; font-size: 14px;">
+              This person has requested early access to Divinity Reflections.
+            </p>
+          </div>
+        `,
+      });
+    } catch (emailError) {
+      // Log email error but don't fail the request
+      console.error("Failed to send email notification:", emailError);
+    }
 
     return NextResponse.json(
       { 

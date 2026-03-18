@@ -91,6 +91,30 @@ export default function Home() {
                 </svg>
                 <span className="text-sm font-medium">California, USA</span>
               </div>
+
+              {/* Request Early Access Button */}
+              <div className="mt-8">
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-medium rounded-full shadow-lg shadow-amber-200 hover:shadow-xl hover:shadow-amber-300 hover:from-amber-600 hover:to-amber-700 transition-all duration-300 hover:scale-105"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                  </svg>
+                  Request Early Access
+                </button>
+                <p className="mt-3 text-sm text-stone-500 text-center">
+                  Already signed up?{' '}
+                  <a 
+                    href="https://divinity-f6971.web.app/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-amber-600 hover:text-amber-700 font-medium underline underline-offset-2"
+                  >
+                    Try the Beta
+                  </a>
+                </p>
+              </div>
             </div>
 
             {/* Text Content */}
@@ -120,30 +144,6 @@ export default function Home() {
                     {feature}
                   </span>
                 ))}
-              </div>
-
-              {/* App Link Button */}
-              <div className="mt-8">
-                <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-medium rounded-full shadow-lg shadow-amber-200 hover:shadow-xl hover:shadow-amber-300 hover:from-amber-600 hover:to-amber-700 transition-all duration-300 hover:scale-105"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                  </svg>
-                  Request Early Access
-                </button>
-                <p className="mt-3 text-sm text-stone-500">
-                  Already signed up?{' '}
-                  <a 
-                    href="https://divinity-f6971.web.app/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-amber-600 hover:text-amber-700 font-medium underline underline-offset-2"
-                  >
-                    Open App
-                  </a>
-                </p>
               </div>
             </div>
           </div>

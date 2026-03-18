@@ -82,7 +82,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
             <DialogHeader>
               <DialogTitle className="text-xl text-stone-800">Request Early Access</DialogTitle>
               <DialogDescription className="text-stone-600">
-                Join the waitlist to bring Divinity Reflections to your students.
+                Join the waitlist to bring Divinity Reflections to your school district.
               </DialogDescription>
             </DialogHeader>
 
@@ -95,7 +95,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="Jane Doe"
+                  placeholder="Hayley Owens"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -111,7 +111,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="jane@school.edu"
+                  placeholder="your@email.com"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -166,7 +166,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
                   name="estimatedStudents"
                   type="number"
                   min="1"
-                  placeholder="500"
+                  placeholder="e.g. 500"
                   value={formData.estimatedStudents}
                   onChange={handleChange}
                   required
@@ -209,7 +209,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
-              Preview the App
+              Try the Beta
             </a>
           </div>
         )}

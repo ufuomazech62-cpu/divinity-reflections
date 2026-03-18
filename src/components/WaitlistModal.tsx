@@ -99,7 +99,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="border-stone-200 focus:border-amber-400 focus:ring-amber-400"
+                  className="border-stone-200 focus:border-stone-500 focus:ring-stone-500"
                 />
               </div>
 
@@ -115,7 +115,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="border-stone-200 focus:border-amber-400 focus:ring-amber-400"
+                  className="border-stone-200 focus:border-stone-500 focus:ring-stone-500"
                 />
               </div>
 
@@ -127,11 +127,10 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
                   id="schoolDistrictName"
                   name="schoolDistrictName"
                   type="text"
-                  placeholder="Lincoln Unified School District"
                   value={formData.schoolDistrictName}
                   onChange={handleChange}
                   required
-                  className="border-stone-200 focus:border-amber-400 focus:ring-amber-400"
+                  className="border-stone-200 focus:border-stone-500 focus:ring-stone-500"
                 />
               </div>
 
@@ -145,7 +144,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
                   value={formData.role}
                   onChange={handleChange}
                   required
-                  className="flex h-9 w-full rounded-md border border-stone-200 bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-amber-400 focus-visible:ring-2 focus-visible:ring-amber-400/50 md:text-sm"
+                  className="flex h-9 w-full rounded-md border border-stone-200 bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-stone-500 focus-visible:ring-2 focus-visible:ring-stone-500/50 md:text-sm"
                 >
                   <option value="" disabled>Select your role</option>
                   <option value="Principal">Principal</option>
@@ -170,7 +169,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
                   value={formData.estimatedStudents}
                   onChange={handleChange}
                   required
-                  className="border-stone-200 focus:border-amber-400 focus:ring-amber-400"
+                  className="border-stone-200 focus:border-stone-500 focus:ring-stone-500"
                 />
               </div>
 
@@ -183,7 +182,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-medium py-5 rounded-full shadow-lg shadow-amber-200 hover:shadow-xl transition-all duration-300"
+                className="w-full bg-stone-800 hover:bg-stone-900 text-white font-medium py-5 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
               >
                 {isSubmitting ? 'Submitting...' : 'Join Waitlist'}
               </Button>
@@ -191,8 +190,8 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
           </>
         ) : (
           <div className="py-8 text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-gradient-to-br from-stone-100 to-stone-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -204,7 +203,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
               href="https://divinity-f6971.web.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-medium rounded-full shadow-lg shadow-amber-200 hover:shadow-xl hover:from-amber-600 hover:to-amber-700 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-stone-800 text-white font-medium rounded-full shadow-md hover:bg-stone-900 hover:shadow-lg transition-all duration-300"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

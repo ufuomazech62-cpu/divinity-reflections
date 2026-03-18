@@ -104,7 +104,7 @@ export default function Home() {
                   Request Early Access
                 </button>
                 <p className="mt-3 text-sm text-stone-500 text-center">
-                  Already signed up?{' '}
+                  Already have access?{' '}
                   <a 
                     href="https://divinity-f6971.web.app/" 
                     target="_blank" 

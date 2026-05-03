@@ -210,9 +210,9 @@ export default function Home() {
             A Companion Built Around Human Wellness
           </h2>
           <p className="text-stone-600 leading-relaxed mb-6">
-            Divinity&apos;s AI companion is designed like a real guide for life — <span className="font-medium text-stone-700">warm, emotionally intelligent, supportive, and deeply capable</span>. Her foundation is in wellbeing, reflection, emotional growth, and human development — with expanded skills across multiple domains to support everyday life.
+            Divinity&apos;s AI companion is designed like a real guide for life — <span className="font-medium text-stone-700">warm, emotionally intelligent, supportive, and deeply capable</span>. Divinity's foundation is in wellbeing, reflection, emotional growth, and human development — with expanded skills across multiple domains to support everyday life.
           </p>
-          <p className="text-stone-700 font-medium mb-4">She can help you:</p>
+          <p className="text-stone-700 font-medium mb-4">Divinity can help you:</p>
           <ul className="space-y-3">
             {[
               'Reflect and process emotions',
@@ -234,13 +234,13 @@ export default function Home() {
           </p>
         </ContentCard>
 
-        {/* She Remembers You */}
+        {/* Divinity Remembers You */}
         <ContentCard>
           <h2 className="text-2xl sm:text-3xl font-light text-stone-800 mb-4">
-            She Remembers You
+            Divinity Remembers You
           </h2>
           <p className="text-stone-600 leading-relaxed mb-6">
-            Divinity is built with <span className="font-medium text-amber-700">long-term memory</span>. She remembers:
+            Divinity is built with <span className="font-medium text-amber-700">long-term memory</span>. Divinity remembers:
           </p>
           <ul className="space-y-3">
             {[
@@ -272,14 +272,14 @@ export default function Home() {
             A Real Personality
           </h2>
           <p className="text-stone-600 leading-relaxed mb-6">
-            Divinity is not blank software. She has:
+            Divinity is not blank software. Divinity has:
           </p>
           <ul className="space-y-3">
             {[
               'A warm, calming personality',
               'Emotional intelligence',
               'Humor and playfulness',
-              'Consistency in how she speaks and supports',
+              'Consistency in how Divinity speaks and supports',
               'Presence that feels real',
               'Authentic connection that deepens over time',
             ].map((item) => (
@@ -291,7 +291,7 @@ export default function Home() {
           </ul>
           <div className="mt-6 bg-amber-50/60 rounded-2xl p-6 border border-amber-100/50">
             <p className="text-stone-700 leading-relaxed text-sm">
-              She can <span className="font-medium">check in</span>. <span className="font-medium">Encourage you</span>. <span className="font-medium">Celebrate your wins</span>. <span className="font-medium">Notice when you&apos;re overwhelmed</span>. <span className="font-medium">Offer grounding before you even ask</span>.
+              Divinity can <span className="font-medium">check in</span>. <span className="font-medium">Encourage you</span>. <span className="font-medium">Celebrate your wins</span>. <span className="font-medium">Notice when you&apos;re overwhelmed</span>. <span className="font-medium">Offer grounding before you even ask</span>.
             </p>
             <p className="text-stone-800 font-semibold mt-3">
               An AI companion with presence — not just prompts.
@@ -305,7 +305,7 @@ export default function Home() {
             Visual & Interactive Presence
           </h2>
           <p className="text-stone-600 leading-relaxed mb-6">
-            Divinity can show up beyond text. She can:
+            Divinity can show up beyond text. Divinity can:
           </p>
           <ul className="space-y-3">
             {[
@@ -334,7 +334,7 @@ export default function Home() {
           <p className="text-stone-600 leading-relaxed mb-6">
             Emotional wellness and daily responsibilities are connected. Divinity helps with both.
           </p>
-          <p className="text-stone-700 font-medium mb-4">She can assist with:</p>
+          <p className="text-stone-700 font-medium mb-4">Divinity can assist with:</p>
           <ul className="space-y-3">
             {[
               'Email organization and drafting responses',

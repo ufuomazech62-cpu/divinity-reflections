@@ -14,24 +14,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Divinity Reflections - AI-Powered Wellbeing for Young People",
-  description: "Divinity Reflections is an AI-powered wellbeing app for young people, designed to support focus, emotional expression, self-confidence, and academic growth. With Bestie, a friendly AI companion, bridging mindfulness, AI, and the gap between student and counselor ratios.",
-  keywords: ["Divinity Reflections", "wellbeing", "AI companion", "Bestie", "mental health", "focus", "students", "mindfulness", "emotional expression", "self-confidence", "academic growth"],
+  title: "Divinity Reflections - AI Companion for Wellbeing, Growth & Everyday Life",
+  description: "Divinity Reflections is an AI-powered wellbeing platform built to support the whole person — emotionally, mentally, academically, and practically. With agentic intelligence, long-term memory, and a warm AI companion that understands you, grows with you, and actively helps lighten your load.",
+  keywords: ["Divinity Reflections", "wellbeing", "AI companion", "mental health", "agentic AI", "long-term memory", "emotional intelligence", "focus tools", "mindfulness", "self-development", "students", "professionals"],
   authors: [{ name: "Hayley Owens" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Divinity Reflections - AI-Powered Wellbeing",
-    description: "An AI-powered wellbeing app for young people, designed to support focus, emotional expression, self-confidence, and academic growth.",
+    title: "Divinity Reflections - AI Companion for Wellbeing, Growth & Everyday Life",
+    description: "An AI-powered wellbeing platform built to support the whole person — emotionally, mentally, academically, and practically. Wellness that listens, intelligence that acts, support that stays.",
     url: "https://divinity-three.vercel.app",
     siteName: "Divinity Reflections",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Divinity Reflections - AI-Powered Wellbeing",
-    description: "An AI-powered wellbeing app for young people, designed to support focus, emotional expression, self-confidence, and academic growth.",
+    title: "Divinity Reflections - AI Companion for Wellbeing, Growth & Everyday Life",
+    description: "An AI-powered wellbeing platform built to support the whole person — emotionally, mentally, academically, and practically.",
   },
 };
 

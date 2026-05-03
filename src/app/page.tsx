@@ -100,6 +100,17 @@ export default function Home() {
                       Try the Beta
                     </a>
                   </p>
+                  <p className="mt-2 text-sm text-stone-500 text-center">
+                    Want updates?{' '}
+                    <a
+                      href="https://www.divinityreflections.space/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-amber-600 hover:text-amber-700 font-medium underline underline-offset-2"
+                    >
+                      Read Our Newsletter
+                    </a>
+                  </p>
                 </div>
               </div>
 

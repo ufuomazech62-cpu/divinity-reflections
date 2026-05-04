@@ -20,9 +20,8 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    schoolDistrictName: '',
     role: '',
-    estimatedStudents: '',
+    estimatedUsers: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState('')
@@ -65,9 +64,8 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
     setFormData({
       name: '',
       email: '',
-      schoolDistrictName: '',
       role: '',
-      estimatedStudents: '',
+      estimatedUsers: '',
     })
     setError('')
     setSuccess(false)
@@ -82,7 +80,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
             <DialogHeader>
               <DialogTitle className="text-xl text-stone-800">Request Early Access</DialogTitle>
               <DialogDescription className="text-stone-600">
-                Join the waitlist to bring Divinity Reflections to your school district.
+                Join the waitlist for early access to Divinity Reflections.
               </DialogDescription>
             </DialogHeader>
 
@@ -120,21 +118,6 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
               </div>
 
               <div>
-                <label htmlFor="schoolDistrictName" className="block text-sm font-medium text-stone-700 mb-1">
-                  School / District Name
-                </label>
-                <Input
-                  id="schoolDistrictName"
-                  name="schoolDistrictName"
-                  type="text"
-                  value={formData.schoolDistrictName}
-                  onChange={handleChange}
-                  required
-                  className="border-stone-200 focus:border-stone-500 focus:ring-stone-500"
-                />
-              </div>
-
-              <div>
                 <label htmlFor="role" className="block text-sm font-medium text-stone-700 mb-1">
                   Your Role
                 </label>
@@ -152,21 +135,24 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
                   <option value="Counselor">Counselor</option>
                   <option value="Teacher">Teacher</option>
                   <option value="Superintendent">Superintendent</option>
+                  <option value="Sales">Sales</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Entrepreneurship">Entrepreneurship</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="estimatedStudents" className="block text-sm font-medium text-stone-700 mb-1">
-                  Estimated Number of Students
+                <label htmlFor="estimatedUsers" className="block text-sm font-medium text-stone-700 mb-1">
+                  Estimated Number of Users
                 </label>
                 <Input
-                  id="estimatedStudents"
-                  name="estimatedStudents"
+                  id="estimatedUsers"
+                  name="estimatedUsers"
                   type="number"
                   min="1"
                   placeholder="e.g. 500"
-                  value={formData.estimatedStudents}
+                  value={formData.estimatedUsers}
                   onChange={handleChange}
                   required
                   className="border-stone-200 focus:border-stone-500 focus:ring-stone-500"

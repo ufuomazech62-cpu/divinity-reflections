@@ -8,10 +8,10 @@ const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || "qosta1210@gmail.co
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, schoolDistrictName, role, estimatedStudents } = body;
+    const { name, email, role, estimatedUsers } = body;
 
     // Validate required fields
-    if (!name || !email || !schoolDistrictName || !role || !estimatedStudents) {
+    if (!name || !email || !role || !estimatedUsers) {
       return NextResponse.json(
         { error: "All fields are required" },
         { status: 400 }
@@ -27,11 +27,11 @@ export async function POST(request: Request) {
       );
     }
 
-    // Validate estimatedStudents is a positive number
-    const studentsNum = parseInt(estimatedStudents);
-    if (isNaN(studentsNum) || studentsNum <= 0) {
+    // Validate estimatedUsers is a positive number
+    const usersNum = parseInt(estimatedUsers);
+    if (isNaN(usersNum) || usersNum <= 0) {
       return NextResponse.json(
-        { error: "Estimated students must be a positive number" },
+        { error: "Estimated users must be a positive number" },
         { status: 400 }
       );
     }
@@ -50,9 +50,8 @@ export async function POST(request: Request) {
             <div style="background: #fafaf9; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <p style="margin: 10px 0;"><strong style="color: #57534e;">Name:</strong> ${name}</p>
               <p style="margin: 10px 0;"><strong style="color: #57534e;">Email:</strong> <a href="mailto:${email}" style="color: #d97706;">${email}</a></p>
-              <p style="margin: 10px 0;"><strong style="color: #57534e;">School/District:</strong> ${schoolDistrictName}</p>
               <p style="margin: 10px 0;"><strong style="color: #57534e;">Role:</strong> ${role}</p>
-              <p style="margin: 10px 0;"><strong style="color: #57534e;">Estimated Students:</strong> ${studentsNum.toLocaleString()}</p>
+              <p style="margin: 10px 0;"><strong style="color: #57534e;">Estimated Users:</strong> ${usersNum.toLocaleString()}</p>
             </div>
             <p style="color: #78716c; font-size: 14px;">
               This person has requested early access to Divinity Reflections.
